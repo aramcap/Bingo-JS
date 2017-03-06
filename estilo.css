@@ -1,0 +1,94 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+	font-family: Helvetica;
+}
+p {
+	font: 1.1em/2 Arial, Helvetica, sans-serif;
+	font-weight: 600;
+}
+#izquierdo {
+    float: left;
+    width: 25%;
+    height: 100%;
+    margin: 0 auto;
+}
+#derecho {
+    float: left;    
+    width: 75%;
+    height: 100%;
+}
+#espacio {
+	width: 25%;
+	height: 10%;
+}
+#izquierdo input[type="number"] {
+    box-sizing: border-box;
+    width: 65px;
+	margin: auto;
+}
+#izquierdo select[id="velo"] {
+    width: 130px;
+	margin: auto;
+}
+#izquierdo select {
+    width: 100px;
+	margin: auto;
+}
+#izquierdo hr {
+    width: 240px;
+}
+#titulo {
+    text-align: center;
+}
+#datos{
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+#info{
+    margin: auto;
+    display: block;
+}
+h4 {
+    line-height: 2px;
+}
+#bola{
+    line-height: 95px;
+    background-color: #515A5A;
+    color: white;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 60px;
+    padding: auto;
+}
+#carton {
+    width: 75%;
+    margin: auto;
+}
+#bbingo {
+    text-align: center;
+    padding: auto;
+    margin: auto;
+}
+#carton td {
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    font-size:60px;
+}
+.hueco{
+	background-image: url(img/bombo.png);
+	background-position: center;
+	background-size: 62px;
+}
+.marca {
+    background-color: white;
+    color: white;
+}

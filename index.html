@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Práctica Bingo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="img/fav.png">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <link href="estilo.css" rel="stylesheet" type="text/css"/>
+        <script src="funciones.js" type="text/javascript"></script>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    </head>
+    <body>
+	 <div id="espacio"></div>
+        <div id="izquierdo">
+            <div id="titulo">
+				<img src="img/icon.png" height="100" width="100">
+                <h1>Práctica Bingo</h1>
+                <h4>Jesús Gamero Méndez</h4>
+                <h5>2º DAW 2017</h5>
+            </div>
+			<div id="datos">
+					   <p>Velocidad de las bolas</p><select id="velo" class="form-control">
+						<option value="1000">Flash</option>
+						<option value="2000">Rápido</option>
+						<option value="4000" selected>Normal</option>
+					  </select><br>
+					   <p>Número de jugadores</p><input type="number" id="njugadores" class="form-control" min="5" max="20" value="5"><br>
+                       <p>Valor del cartón</p><select id="valorc" class="form-control">
+                            <option value="1" selected="selected">1 Euro</option>
+                            <option value="2">2 Euros</option>
+                            <option value="3">3 Euros</option>
+                            <option value="4">4 Euros</option>
+                            <option value="5">5 Euros</option>
+                        </select>	
+            <hr>
+           <button type="submit" class="btn btn-default" id="biniciar" onclick="comenzar()"><b>COMENZAR</b></button>
+            <hr></div>
+        </div>
+        <div id="derecho">
+		<div id="info">
+			<div id="espacio"></div><br>
+			<h1>Documentación</h1><br>
+			<ul>
+			  <li>Puedes ajustar el número de jugadores y el valor del cartón en el menú izquierdo.</li>
+			  <li>Además también puedes seleccionar la velocidad la bola.</li>
+			  <li>La velocidad normal es de 4000 ms, la rápida de 2000 ms y la velocidad flash de 1000 ms.</li>
+			  <li>Esta práctica mezcla Javascript, CSS, jQuery y AJAX para sacar la bola.</li>
+			  <li>El resultado del bingo está hecho con ventanas emergentes y no con alerts así que es importante permitir su visaulización.</li>
+			  <li>En caso de cantar Bingo y que sea incorrecto hay que hacer uso del botón "Volver al juego" para continuar con el juego.</li>
+			  <li>El caso de que haya varios ganadores calculo el premio correctamente y muestro en una ventana que han sido varios los agraciados.</li>
+			  <li>A la hora de sacar una bola simulo un bombo de verdad de tal manera que tengo un array con 90 números y voy quitando del array las bolas que van saliendo.</li>
+			  <li>De esta forma evito repeticiones más facilmente y me parece que se ajusta más a la realidad.</li>
+			  <li>Genero en un array multidimensional los cartones con números aleatorios tan grande como jugadores haya.</li>
+			  <li>A las cldas con huecos vacios generados les asigno el valor -1 para posteriormente asignarle la clase "hueco".</li>
+			  <li>Para dibujar el cartón la función solo recibe el primer elemento del array cartones (cartones[0]) ya que solo quiero dibujar el mio.</li>
+			  <li>Posteriormente tengo una función que lee los números y me guarda de manera ordenada en un array simple todos los números sin los huecos de los cartones.</li>
+			  <li>De esta manera puedo comprobar los resultados de los bingos más facilmente.</li>
+			  <li>El bingo no tiene en cuenta los marcados, aunque esto sería facil de cambiar, ya que no tenía muy claro si se tenía que tener en cuenta las fichas marcadas o era algo estético.</li>
+			  <li>De esta manerá cuando le das a cantar bingo solo comprueba que los números del cartón coincidan con las bolas sacadas.</li>
+			  <li>Esta práctica está probada en el navegador Chrome 56, aunque es posible que también funcione en Firefox.</li>
+			  <li>Este Bingo ha sido probado con el XAMPP 5.6.30 que incluye el mismo número de versión de PHP.</li>
+			  <li>Que tengas mucha suerte y pongas buena nota.</li>
+			</ul>
+		</div>
+		</div>
+    </body>
+</html>
