@@ -55,40 +55,33 @@ h4 {
     line-height: 2px;
 }
 #bola{
-    line-height: 95px;
+    line-height: 380px;
     background-color: #515A5A;
     color: white;
     margin: auto;
-    height: 100px;
-    width: 100px;
+    height: 400px;
+    width: 400px;
+    border-radius: 400px;
+    text-align: center;
+    font-size: 300px;
+    padding: auto;
+}
+#bolita{
+    line-height: 50px;
+    background-color: #515A5A;
+    color: white;
+    margin: auto;
+    height: 50px;
+    width: 50px;
     border-radius: 50px;
     text-align: center;
-    font-size: 60px;
+    font-size: 30px;
     padding: auto;
+    float: left;
 }
-#carton {
-    width: 75%;
-    margin: auto;
+.btn {
+    margin: 5px;
 }
-#bbingo {
+#pie{
     text-align: center;
-    padding: auto;
-    margin: auto;
-}
-#carton td {
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    font-size:60px;
-}
-.hueco{
-	background-image: url(img/bombo.png);
-	background-position: center;
-	background-size: 62px;
-}
-.marca {
-    background-color: white;
-    color: white;
 }
