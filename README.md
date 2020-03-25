@@ -1,5 +1,9 @@
 # Bingo app!
 
+
+EMPIEZA A JUGAR PULSANDO [AQUÍ](https://aramcap.github.io/Bingo-JS/index.html)!
+
+
 Bingo app! es una aplicación para jugar al bingo en familia o amigos.
 
 ![](readme_files/img1.png)
@@ -30,3 +34,4 @@ Este código parte de un fork del repositorio https://github.com/jesusgamero/Bin
 ## Agradecimientos
 
 Gracias <a href="https://github.com/jesusgamero">Jesús Gamero</a> por el código fuente.
+
