@@ -40,8 +40,8 @@ function aleatorio(inicio, fin, numero) {
  */
 function comenzar() {
 
-    //Guardo en variables los datos del formulario lateral
-    velocidad = window.parent.document.getElementById("velo").value;
+    //Establecemos la velocidad
+    setVelocidad(window.parent.document.getElementById("velo").value);
 
     //Relleno array bombo con los numeros
     llenarBombo();
@@ -77,15 +77,18 @@ function pausar() {
     document.getElementById("biniciar").disabled = false;
     document.getElementById("biniciar").setAttribute("onClick", "reanudar()");
     document.getElementById("bpausa").disabled = true;
+    document.getElementById("velo").disabled = false;
 }
 
 /**
  * Reanuda el juego y cambia los botones activos
  */
 function reanudar() {
+    setVelocidad(window.parent.document.getElementById("velo").value);
     iniciar();
     document.getElementById("biniciar").disabled = true;
     document.getElementById("bpausa").disabled = false;
+    document.getElementById("velo").disabled = true;
 }
 
 /**
@@ -101,6 +104,13 @@ function parar() {
  */
 function resetear() {
     window.location.reload();
+}
+
+/**
+ * Establece velocidad
+ */
+function setVelocidad(int){
+    velocidad = int * 1000;
 }
 
 /**
@@ -134,6 +144,8 @@ function sacaBola(indice) {
         bombo.splice(indice, 1);
         document.getElementById("bola").innerHTML = nbola;
         document.getElementById("lista_bolas").innerHTML = "<div id='bolita'>".concat(hanSalido.join("</div><div id='bolita'>"),"</div>")
+        document.getElementById("ordenar_button").innerHTML = "ORDEN NUMÉRICO";
+        document.getElementById("ordenar_button").setAttribute("href", "javascript:ordenar()");
     }else {
         alert("Se han sacado todos los números");
         parar();
@@ -147,6 +159,22 @@ function muestraBola() {
     $("#derecho").append("<br>");
     $("#derecho").append("<div id='bola'>?</div>");
     $("#derecho").append("<br><br>");
-    $("#derecho").append("<p>BOLAS EXTRAÍDAS</p>");
+    $("#derecho").append("<p>BOLAS EXTRAÍDAS (ver por <a id='ordenar_button' href='javascript:ordenar()'>ORDEN NUMÉRICO</a>)</p>");
     $("#derecho").append("<div id='lista_bolas'></div>");
+}
+
+function ordenar(){
+    $("#lista_bolas").empty();
+    lista_bolas = [...hanSalido]
+    lista_bolas.sort(function(a, b){return a - b;});
+    document.getElementById("lista_bolas").innerHTML = "<div id='bolita'>".concat(lista_bolas.join("</div><div id='bolita'>"),"</div>");
+    document.getElementById("ordenar_button").innerHTML = "ORDEN DE EXTRACCIÓN";
+    document.getElementById("ordenar_button").setAttribute("href", "javascript:desordenar()");
+}
+
+function desordenar(){
+    $("#lista_bolas").empty();
+    document.getElementById("lista_bolas").innerHTML = "<div id='bolita'>".concat(hanSalido.join("</div><div id='bolita'>"),"</div>");
+    document.getElementById("ordenar_button").innerHTML = "ORDEN NUMÉRICO";
+    document.getElementById("ordenar_button").setAttribute("href", "javascript:ordenar()");
 }

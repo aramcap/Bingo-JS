@@ -26,12 +26,8 @@
             <h1>Bingo App!</h1>
         </div>
         <div id="datos">
-            <p>Velocidad de extracción</p><select id="velo" class="form-control">
-                <option value="1000">Flash (1s)</option>
-                <option value="3000">Rápido (3s)</option>
-                <option value="5000">Normal (5s)</option>
-                <option value="10000">Lento (10s)</option>
-            </select><br>
+            <p>Velocidad de extracción</p>
+            <input type="number" id="velo" name="quantity" min="1" max="15" value="7" step="1"> segundos
             <hr>
             <button type="submit" class="btn btn-default" id="biniciar" onclick="comenzar()"><b>INICIAR</b></button>
             <button type="submit" class="btn btn-default" id="bpausa" onclick="pausar()" disabled><b>PAUSAR</b></button>
@@ -51,8 +47,10 @@
             <ul>
                 <li>Esto es un simulador de un bombo de bingo.</li>
                 <li>Abajo aparecerá el listado de las bolas que ya han sido extraidas.</li>
-                <li>Puedes seleccionar la velocidad con la que se extraen las bolas: 1, 3, 5 o 10 segundos.</li>
-                <li>También puedes pausar o reanudar cuando lo necesites.</li>
+                <li>Puedes seleccionar la velocidad con la que se extraen las bolas: entre 1 y 15 segundos.</li>
+                <li>La velocidad de extracción recomendada son 7 segundos.</li>
+                <li>Durante la partida podrás cambiar la velocidad de extracción poniendo la partida en pausa.</li>
+                <li>Puedes pausar o reanudar cuando lo necesites.</li>
                 <li>Los cartones los puedes generar haciendo click <a href="http://www.bingo.es/cartones-bingo/" target="_blank">AQUÍ</a>.</li>
                 <li>Y ahora sí, para empezar solo debes pulsar en INICIAR.</li>
                 <li>DISFRUTA MUCHO!</li>
